@@ -1,0 +1,276 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Author: Net Support Team-->
+<!--Project Name: My Bank - Explore More-->
+
+<struts-config>
+	<!-- ============ Data Source Configuration ============ -->
+	<!--<data-sources> </data-sources>-->
+	<!-- ============ Form Bean Definitions ============ -->
+	<form-beans>
+							<!--| ========================================| -->
+							<!--| Customer Information Form Beans  Start  | -->
+							<!--| ========================================| -->
+
+	    <form-bean name="ibankingUserLogInForm" type="com.ibank.login.formbean.IBankingUserLogInForm"/>	 
+	    <form-bean name="transactionForm" type="com.ibank.accountprofile.formbean.TransactionForm"/>  
+		
+
+	</form-beans>
+
+	<!-- ============ Global Exception Definitions ========== -->
+    	<global-exceptions></global-exceptions>
+	<!-- ============ Global Forward Definitions ============ -->
+    	<global-forwards></global-forwards>
+	<!-- ============ Action Mapping Definitions ============ -->
+
+    <action-mappings>
+	
+
+	<action path="/doReFreshCaptchaForPaymentmanagement" 
+		type="com.ibanking.login.action.IbankingLogInAction" 
+		name="ibankingUserLogInForm" 
+		validate="false" 
+		input="/memberLogin.jsp">
+		<forward name="success" path="/memberLogin.jsp"/>
+		<forward name="failure" path="/memberLogin.jsp"/>
+	</action>
+
+	<action path="/ibankingUserLogIn" 
+		type="com.ibank.login.action.IBankingUserLogInAction" 
+		name="ibankingUserLogInForm" 
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp" />
+		<forward name="failure" path="/index.jsp" />
+	</action>
+	
+		<action path="/userSignUp" 
+		type="com.ibank.login.action.IBankingUserLogInAction" 
+		name="ibankingUserLogInForm" 
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/UserSignUp.jsp"/>
+		<forward name="failure" path="/index.jsp"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/index.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+
+	<action path="/logOutIBanking" 
+		type="com.ibank.login.action.IBankingUserLogInAction" 
+		name="ibankingUserLogInForm" 
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/pages/menu/ibankingMenu.jsp"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankingMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	
+	<action path="/ibankingUserLogInSubmit" 
+	    type="com.ibank.login.action.IBankingUserLogInAction" 
+	    name="ibankingUserLogInForm" 
+	    validate="false" 
+	    input="/index.jsp">
+		<forward name="success" path="/pages/menu/NBFIMyBankMenu.jsp"/>
+		<forward name="changeMyPassword" path = "/MyPINChangeIBanking.jsp"/>
+		<forward name="failure" path = "/index.jsp"/>
+		<forward name="sessionExpire" path ="/index.jsp"/>		
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	<action path="/myPINChange" 
+	    type="com.ibank.login.action.IBankingUserLogInAction" 
+	    name="ibankingUserLogInForm" 
+	    validate="false" 
+	    input="/index.jsp">
+		<forward name="success" path = "/MyPINChangeIBanking.jsp"/>
+		<forward name="failure" path = "/MyPINChangeIBanking.jsp"/>
+		<forward name="sessionExpire" path ="/index.jsp"/>		
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	<action path="/myPINUpdate" 
+	    type="com.ibank.login.action.IBankingUserLogInAction" 
+	    name="ibankingUserLogInForm" 
+	    validate="false" 
+	    input="/index.jsp">
+		<forward name="success" path="/MyPINChangeIBanking.jsp"/>
+		<forward name="changeMyPassword" path = "/MyPINChangeIBanking.jsp"/>
+		<forward name="failure" path = "/index.jsp"/>
+		<forward name="sessionExpire" path ="/index.jsp"/>		
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	
+	<action path="/executeUserAccountStatement" 
+	    type="com.ibank.login.action.IBankingUserLogInAction" 
+	    name="ibankingUserLogInForm" 
+	    validate="false" 
+	    input="/pages/menu/IBankingUserMenu.jsp">
+		<forward name="success" path="/pages/menu/IBankingUserMenu.jsp"/>
+		<forward name="failure" path ="/pages/menu/IBankingUserMenu.jsp"/>
+		<forward name="sessionExpire" path ="/index.jsp"/>		
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	<action path="/accountInfoStatement" 
+	    type="com.ibank.login.action.IBankingUserLogInAction" 
+	    name="ibankingUserLogInForm" 
+	    validate="false" 
+	    input="/pages/menu/NBFIibankMenu.jsp">
+		<forward name="success" path="/pages/menu/IBankingUserMenu.jsp"/>
+		<forward name="failure" path ="/pages/menu/IBankingUserMenu.jsp"/>
+		<forward name="sessionExpire" path ="/index.jsp"/>		
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	<action path="/goBackHomePage" 
+	    type="com.ibank.login.action.IBankingUserLogInAction" 
+	    name="ibankingUserLogInForm" 
+	    validate="false" 
+	    input="/pages/menu/NBFIMyBankMenu.jsp">
+		<forward name="success" path="/pages/menu/NBFIMyBankMenu.jsp"/>
+		<forward name="failure" path ="/pages/menu/NBFIMyBankMenu.jsp"/>
+		<forward name="sessionExpire" path ="/index.jsp"/>		
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	<action path="/logOutibank" 
+		type="com.ibank.login.action.IBankingUserLogInAction"
+		name="ibankingUserLogInForm" 
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>	
+	
+	
+	<action path="/ReportNBFTransactionStatement" 
+	    type="com.ibank.login.action.IBankingUserLogInAction" 
+	    name="ibankingUserLogInForm" 
+	    validate="false" 
+	    input="/pages/menu/IBankingUserMenu.jsp">
+		<forward name="success" path="/pages/menu/IBankingUserMenu.jsp"/>
+		<forward name="failure" path ="/pages/menu/IBankingUserMenu.jsp"/>
+		<forward name="sessionExpire" path ="/index.jsp"/>		
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	
+	
+	<!-- Transaction Balance -->
+	<!-- =================== -->	
+
+	<action path="/transactionInfoEnquiry" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<forward name="success" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>
+	<action path="/accountNoTransactionInfoEnquiry" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<forward name="success" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>
+	<action path="/executeTransactionInfoEnquiry" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<forward name="success" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>
+	<action path="/searchTransactionInfoEnquiry" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<forward name="success" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>
+	
+	<action path="/ReportTransactionStatement" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<forward name="success" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>
+
+	<action path="/fileAccountStatement" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<forward name="success" path="/pages/accountprofile/Transaction.jsp"/>
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp"/>
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>	
+	<action path="/cancelTransactionInfoEnquiry" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<!--<forward name="success" path="/logInibankMenu.do"/>-->
+	  	<forward name="success" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp" />
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>
+	<action path="/displayTransactionInfoEnquiry" 
+		type="com.ibank.accountprofile.action.TransactionAction" 
+		name="transactionForm" 
+		validate="false" 
+		input="/pages/accountprofile/Transaction.jsp">
+		<forward name="success" path="/pages/accountprofile/Transaction.jsp"/>
+		<forward name="failure" path="/pages/accountprofile/Transaction.jsp"/>
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>
+
+	<!-- Transaction Balance End -->
+	<!-- ======================= -->
+	
+	
+    </action-mappings>
+
+	<!-- ============ Controller Configuration      ============ -->
+	<!-- ============ Message Resources Definitions ============ -->
+	<message-resources parameter="NetBankingResources" />
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml"/>
+	</plug-in>
+	
+</struts-config>

@@ -1,0 +1,50 @@
+.number {
+    text-align:right;
+}
+div.tableContainer {
+    clear: both;
+    border: 1px solid #963;
+    height: 285px;
+    overflow: auto;
+    width: 100%;
+}
+div.tableContainer table {
+    float: left;
+    width: 100%;
+}
+
+div.tableContainer1 {
+    clear: both;
+    border: 0;
+    height: 135px;
+    overflow: auto;
+    width: 100%;
+}
+div.tableContainer1 table {
+    float: left;
+    width: 100%;
+}
+thead.fixedHeader tr {
+    position: relative;
+}
+thead.fixedHeader th {
+    background: #9CC;
+    border: 1px solid #FFF;
+    padding: 4px 3px;
+    text-align: center;
+}
+tbody.scrollContent td {
+    background: #9CF;
+    border: 1px solid #FFF;
+    padding: 2px 3px 3px 4px;
+}
+tfoot.fixedHeader tr {
+    position: relative;
+}
+
+/*thead tr {
+    position: absolute; top: expression(this.offsetParent.scrollTop);
+}
+tbody {
+    height: auto;
+}*/

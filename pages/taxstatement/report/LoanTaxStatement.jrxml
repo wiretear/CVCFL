@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="LoanTaxStatement"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="20"
+		 rightMargin="20"
+		 topMargin="15"
+		 bottomMargin="5"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="sSubReportPath" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sUserID" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sSessionID" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sImagePath" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps\\mybank\\pages\\images\\balogo.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sFromDate" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sToDate" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sStatementHeader" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="sStatementDate" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[SELECT  NVL(DBAMFC,' ')DBAMFC, NVL(CRAMFC,' ') CRAMFC, NVL(CURBAL,' ') CURBAL, 
+NVL(SERNUM,0) SERNUM
+FROM ibnk.DT_ACT_STATEMENT
+WHERE mailid=$P{sUserID}
+and sessionid=$P{sSessionID}
+order by SERNUM]]></queryString>
+
+	<field name="DBAMFC" class="java.lang.String"/>
+	<field name="CRAMFC" class="java.lang.String"/>
+	<field name="CURBAL" class="java.lang.String"/>
+	<field name="SERNUM" class="java.math.BigDecimal"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="252"  isSplitAllowed="true" >
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="8"
+						width="120"
+						height="30"
+						key="image-1"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA[$P{sImagePath}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="129"
+						y="5"
+						width="150"
+						height="13"
+						key="staticText-4"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[CVC Finance Limited.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="402"
+						y="4"
+						width="153"
+						height="11"
+						key="staticText-5"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="7" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Help Line : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="129"
+						y="18"
+						width="150"
+						height="11"
+						key="staticText-6"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+				<text><![CDATA[Principal Branch]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="129"
+						y="29"
+						width="219"
+						height="11"
+						key="staticText-7"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+				<text><![CDATA[Green Grandeur Tower (Level-07) 58/E Kemal Ataturk Avenue]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="129"
+						y="40"
+						width="150"
+						height="11"
+						key="staticText-8"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+				<text><![CDATA[Dhaka - 1213]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="402"
+						y="15"
+						width="153"
+						height="11"
+						key="staticText-9"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" size="7" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Phone: +880 (2) 9820038-39, +880 (2) 9820041]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="402"
+						y="26"
+						width="153"
+						height="11"
+						key="staticText-10"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" size="7" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Fax : +880 (2) 9822027]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="402"
+						y="37"
+						width="153"
+						height="11"
+						key="staticText-11"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" size="7" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Email: contact@cvcflbd.com]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="402"
+						y="48"
+						width="153"
+						height="11"
+						key="staticText-12"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" size="7" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Web: www.cvcflbd.com]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="200"
+						y="135"
+						width="150"
+						height="13"
+						key="staticText-13"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[TO WHOM IT MAY CONCERN]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="157"
+						width="555"
+						height="95"
+						key="textField-9"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Top">
+						<font fontName="SansSerif" pdfFontName="Helvetica" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{sStatementHeader}]]></textFieldExpression>
+				</textField>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="85"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="414"
+						y="67"
+						width="116"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="530"
+						y="67"
+						width="25"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER} + ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="158"
+						y="1"
+						width="281"
+						height="10"
+						key="staticText-24"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Thank you for giving us the oppoetunity to serve you.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="-1"
+						y="14"
+						width="555"
+						height="34"
+						key="staticText-25"/>
+					<box></box>
+					<textElement textAlignment="Justified">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+				<text><![CDATA[Please notify your branch for any discrepancies or irregularities, within 15 calendar days from the date of the statement is collected. Otherwise it will be deemed that the customer has found this statement correct. This computer generated statement required no signature.]]></text>
+				</staticText>
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

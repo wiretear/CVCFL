@@ -1,0 +1,69 @@
+<!--Author: Net Support Team-->
+<!--Project Name: My Bank - Net Banking-->
+<project name="IBankingUser" default="deploy" basedir=".">
+  <description>IBankingUser - IBankingUser</description>
+  
+  <!-- Set to use jdk1.8 -->
+  <property name="build.compiler" value="javac1.4"/>
+
+  <!-- set global properties for this build -->
+
+  <property name="src" location="WEB-INF/src"/>
+  <property name="classes" location="WEB-INF/classes"/>
+  <property name="tomcat-home" location="C:\Program Files\Apache Software Foundation\Tomcat 8.5\"/>
+  <property name="lib" location="WEB-INF/lib"/>
+  <property name="servlet.jar" location="${lib}/servlet.jar"/>
+  <property name="deploy" location="${tomcat-home}/webapps"/>
+
+  <target name="init" description="clean up" >
+    <delete file="./ibankinguser.war"/>
+    <delete dir="${tomcat-home}/webapps/ibankinguser"/>
+    <delete file="${tomcat-home}/webapps/ibankinguser.war"/>
+    <delete dir="${tomcat-home}/work/Catalina/localhost/ibankinguser"/>
+    <delete dir="${tomcat-home}/work/Catalina/localhost/_"/>
+  </target>
+
+  <target name="compile"  depends="init" description="compile the source " >
+    
+    <javac srcdir="${src}" destdir="${classes}" debug="on">
+    <!--<javac srcdir="${classes}" destdir="${classes}" debug="on">-->
+    <classpath>
+	  	<pathelement path="${classpath}"/>
+	  		<pathelement location="${servlet.jar}"/>
+   	    	<fileset dir="${lib}">
+   	    		<include name="**/*.jar"/>
+   	    	</fileset>
+    	</classpath>
+    </javac>
+  </target>
+  
+  <target name="ibankinguser" depends="compile" description="generate the distribution and deploye it to tomcat" >
+
+	<war destfile="./ibankinguser.war" webxml="./WEB-INF/web.xml">
+ 
+	  	<fileset dir=".">
+			<exclude name="WEB-INF/web.xml"/>
+			<exclude name=".*"/>
+			<exclude name="WEB-INF"/>
+			<exclude name="build.xml"/>
+	  	</fileset>
+			  	  	
+  	  	<webinf dir="WEB-INF">
+  	  		  <include name="struts-config.xml"/>
+  	  		  <include name="validation.xml"/>
+  	  		  <include name="validator-rules.xml"/>
+  	  		  <include name="*.tld"/>
+  	  		  <include name="*.dtd"/>
+  	  	</webinf>
+
+      	<lib dir="WEB-INF/lib">
+      		  <include name="**/*.jar"/>
+      	</lib>
+      	
+      	<classes dir="WEB-INF/classes"/>
+      	
+	</war>
+       
+       <copyfile dest="${tomcat-home}/webapps/ibankinguser.war" src="./ibankinguser.war"/>
+  </target>
+</project>

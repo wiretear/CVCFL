@@ -1,0 +1,1031 @@
+﻿/* Added by Khaid on 05 July 2009 */
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px; /*color: #4a4747;*/ /*color: #585858;*/
+	color: Black;
+}
+
+img
+{
+	border: 0;
+}
+
+form
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+input[type="submit"]:disabled
+{
+	background:#dddddd;
+	color:#666666;
+}
+
+#maincontainer
+{
+	margin: 0px auto 0 auto;
+	padding: 0;
+	width: 900px; /*background-color: #c1d5de;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	vertical-align: middle;
+	text-align: left;
+}
+#h_maincontainer
+{
+	margin: 0px auto 0 auto;
+	padding: 0;
+	width: auto; /*background-color: #c1d5de;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	vertical-align: middle;
+	text-align: left;
+	border: 1px solid #ededed;
+}
+
+
+#popupContainer
+{
+	margin: 0 auto 0 auto;
+	padding: 0;
+	background-color: #F5F5F5;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	vertical-align: middle;
+	text-align: left;
+}
+
+
+
+#maincontainerPopup
+{
+	margin: 0 auto 0 auto;
+	padding: 0;
+	width: 100%; /*background-color: #c1d5de;*/
+	background-color: #F5F5F5;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.pageTitle
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 10px;
+	color: white;
+	vertical-align: bottom;
+	padding-bottom: 3px;
+}
+
+
+.header-thickLine
+{
+	color: #FFFFFF;
+	background-image: url(  ../../Images/HeaderBackground.png );
+	height: 72px;
+	vertical-align: bottom;
+}
+
+
+.ProjectName
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	padding-left: 0px;
+	color: #FFFFFF;
+	vertical-align: bottom;
+}
+.ProjectVersion
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #FFFFFF;
+	vertical-align: bottom;
+}
+
+.header-thinLine
+{
+	color: white; /*background-color: #11A6D4;*/
+	height: 8px;
+}
+
+#header
+{
+	/*float:none;*/
+	margin: 0 auto 0 auto; /*background-image: url( 'banner.gif'); 	height: 89px;*/
+}
+
+
+#PageHeader
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-image: url(  ../../Images/PageHeaderBackground.png );
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #FFFFFF;
+	vertical-align: bottom;
+	height: 22px;
+}
+
+.footer
+{
+	color: #FFF;
+	text-align: center;
+	background-color: #0072bb;
+	height: 60px;
+}
+.groupHeaderText
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt; /*color: #585858;*/
+	color: #3D89E9;
+	font-weight: bold;
+	border-bottom-color: #1f62af;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+
+
+.mGrid
+{
+	width: 100%;
+	background-color: #ffffff;
+	margin: 5px 0 10px 0;
+	border: solid 0px #525252;
+	border-collapse: collapse;
+}
+.mGrid td
+{
+	padding: 2px;
+	border: solid 1px #c1c1c1;
+	color: #717171;
+}
+.mGrid th
+{
+	padding: 4px 2px;
+	color: #ffffff;
+	background: #709245 url(grd_head.gif) repeat-x top;
+	border-left: solid 1px #525252;
+	font-size: 0.9em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.mGrid .alt
+{
+	background: red url(grd_alt.png) repeat-x top;
+}
+.mGrid .pgr
+{
+	background: blue url(grd_pgr.png) repeat-x top;
+}
+.mGrid .pgr table
+{
+	margin: 5px 0;
+}
+.mGrid .pgr td
+{
+	border-width: 0;
+	padding: 0 6px;
+	border-left: solid 1px #666;
+	font-weight: bold;
+	color: #fff;
+	line-height: 12px;
+}
+.mGrid .pgr a
+{
+	color: #666;
+	text-decoration: none;
+}
+.mGrid .pgr a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
+
+.defaultGridHeader
+{
+	background-color: #769A37;
+	background-image: url(grd_head.gif);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 22px;
+}
+
+.defaultGridHeader th
+{
+	padding: 2px;
+	border: solid 1px #91B4C5;
+}
+
+.defaultGridRow
+{
+	background-color: #C2D9E4; /*#E0CC3C;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	height: 12px;
+}
+
+
+.defaultGridRow td
+{
+	padding: 2px;
+	border: solid 1px #91B4C5;
+	color: #717171;
+}
+
+.defaultGridAlternateRow
+{
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	height: 12px;
+}
+.defaultGridAlternateRow td
+{
+	padding: 2px;
+	border: solid 1px #91B4C5;
+	color: #717171;
+}
+
+.defaultGridSelectedRow
+{
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	height: 12px;
+}
+
+
+.defaultGridFooterStyle
+{
+	background-color: #769A37;
+	background-image: url(grd_head.gif);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: red;
+	height: 10px;
+}
+
+
+.defaultGridPagerStyle
+{
+	background-color: #769A37;
+	background-image: url(grd_head.gif);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: white;
+	height: 10px;
+}
+
+.defaultGridPagerStyle a
+{
+	color: White;
+}
+
+.defaultGridPagerStyle span
+{
+	color: White;
+	font-weight: bold;
+}
+
+.defaultGridEmptyData
+{
+	background-color: #C2D9E4;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	height: 12px;
+	text-align: center;
+}
+/*
+#logo  
+{
+	width: 215px;
+	height: 62px;
+	float: left;
+	vertical-align: middle;
+	padding: 10px;
+}*/
+
+/* purpose: To define controle styles*/
+
+
+/* purpose: To make two column detail page */
+.tb-TwoColumnDetail
+{
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.tr-TwoColumnDetail
+{
+}
+
+.td-labelColumnOfTwoColumn
+{
+	width: 30%;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.td-SingleColumnOfTwoColumn
+{
+	text-align: left;
+	width: 70%;
+}
+.td-DoubleColumnOfTwoColumn
+{
+	width: 100%;
+}
+
+/* purpose: To make four column detail page */
+.tb-FourColumnDetail
+{
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.tr-FourColumnDetail
+{
+}
+.td-labelColumnOfFourColumn
+{
+	width: 25%;
+	text-align: right;
+	font-weight: bold;
+	color: #585858;
+}
+.td-SingleColumnOfFourColumn
+{
+	width: 25%;
+}
+.td-DoubleColumnOfFourColumn
+{
+	width: 50%;
+}
+.td-TrippleColumnOfFourColumn
+{
+	width: 75%;
+}
+.td-QuadColumnOfFourColumn
+{
+	width: 100%;
+}
+.txt-FullTrippleCol
+{
+	width: 100%;
+}
+.txt-FullDualCol
+{
+	width: 100%;
+}
+.txt-FullSingleCol
+{
+	width: 100%;
+}
+.cbo-FullTrippleCol
+{
+	width: 100%;
+}
+.cbo-FullDualCol
+{
+	width: 100%;
+}
+.cbo-FullSingleCol
+{
+	width: 100px;
+}
+.td-requiredField
+{
+	width: 7px;
+	text-align: center;
+}
+
+/* purpose: To make six column detail page */
+
+.tb-SixColumnDetail
+{
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.tr-SixColumnDetail
+{
+}
+.td-labelColumnOfSixColumn
+{
+	width: 22%;
+	text-align: right;
+}
+.td-newButtonColumnOfSixColumn
+{
+	width: 3%;
+	text-align: left;
+}
+.td-SingleColumnOfSixColumn
+{
+	width: 25%;
+}
+.td-QuadColumnOfSixColumn
+{
+	width: 75%;
+}
+.tb-SixColumnDetail
+{
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.tr-SixColumnDetail
+{
+}
+.td-labelColumnOfSixColumn
+{
+	width: 22%;
+	text-align: right;
+	font-weight: bold;
+}
+.td-newButtonColumnOfSixColumn
+{
+	width: 3%;
+	text-align: left;
+}
+.td-SingleColumnOfSixColumn
+{
+	width: 25%;
+}
+.td-QuadColumnOfSixColumn
+{
+	width: 75%;
+}
+
+.td-FiveColumnOfSixColumn
+{
+	width: 78%;
+}
+
+.td-SixColumnOfSixColumn
+{
+	width: 100%;
+}
+
+
+.PopupPageTitle
+{
+	background-image: url(../../Images/MenuBackground.png);
+	width: 100%;
+	text-align: left;
+	height: 34px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 10px;
+	color: white;
+}
+
+#menuBar
+{
+	background-image: url(../../Images/MenuBackground.png);
+	width: 100%;
+	text-align: left;
+	height: 20px;
+}
+#menuBar td
+{
+	text-align: center;
+	vertical-align: middle;
+	height: 34px;
+}
+#menuBar a
+{
+	color: White;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+	font-size: 8pt;
+}
+
+
+#menuBar a:hover
+{
+	color: #FBEB80;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+	font-size: 8pt;
+}
+
+#menuBar div
+{
+	padding-bottom: 5px;
+}
+
+
+.menuSeparator
+{
+	background-image: url(../../Images/MenuSeparator.png);
+	text-align: center;
+	width: 14px;
+	height: 34;
+}
+
+.XTabActiveButtonCell
+{
+	border-left: solid 1px #557da4;
+	border-top: solid 1px #557da4;
+	background-image: url(../../Images/TabControl/ActiveTab.jpg);
+	height: 22px;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.XTabActiveButton
+{
+	color: black;
+	font-family: tahoma;
+	font-size: 9pt;
+	cursor: pointer;
+}
+.XTabActivePanel
+{
+	width: 100%;
+}
+.XTabInactiveButton
+{
+	font-size: 9pt;
+	color: black;
+	font-family: tahoma;
+	height: 22px;
+	cursor: pointer;
+}
+.XTabInactiveButtonCell
+{
+	border-left: solid 1px #c4c5c6;
+	border-top: solid 1px #c4c5c6;
+	background-image: url(../../Images/TabControl/InactiveButtonBack20_.gif);
+	height: 22px;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.XTabInactivePanel
+{
+	width: 100%;
+	display: none;
+}
+
+
+.XTabEndSapceButtonCell
+{
+	border-left: solid 1px #c4c5c6;
+	background-color: #F5F5F5; /*background-color: #F4F9E9;*/
+	height: 22px;
+}
+.XTabButtonRow
+{
+	height: 22px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.XTabLineRow
+{
+	height: 10px;
+	width: 100%;
+	background-color: #97B55A;
+}
+
+.XTabPageCell
+{
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	border-top: solid 1px #91B4C5;
+	border-bottom: solid 1px #91B4C5;
+	border-left: solid 1px #91B4C5;
+	border-right: solid 1px #91B4C5;
+}
+
+.errorMessage
+{
+	color: #C90202;
+	font-weight: bold;
+}
+.successMessage
+{
+	color: #145E03;
+	font-weight: bold;
+}
+.WarningMessage
+{
+	color: #1100B1;
+	font-weight: bold;
+}
+
+.td-SoundLikeSearch
+{
+	border-color: Green;
+	border-width: 1px;
+	border-style: solid;
+}
+.td-StraightSearch
+{
+	border-color: blue;
+	border-width: 1px;
+	border-style: solid;
+}
+.image_btn
+{
+	background-image: url(Button.gif);
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: verdana;
+	font-weight: bold;
+	width: 82px;
+	height: 30px;
+	border: 0px;
+	padding: 0px;
+	height: 40px;
+	margin: 0px;
+}
+
+
+.hiddenControl
+{
+	visibility: hidden;
+	display: none;
+}
+
+.requiredFieldMessage
+{
+	color: Red;
+}
+
+.td-MessageRow
+{
+	height: 20px;
+	padding-left: 5px;
+}
+
+.EmptyRow
+{
+	height: 5px;
+}
+
+.OnePixBottomBorder
+{
+	border-bottom: solid 1px #BFCFFE;
+}
+
+.PageLastUpdate
+{
+	color: #F0D56B;
+	
+	width:300px;
+	text-align:right;
+}
+
+.PageUserName
+{
+	width: 300px;
+	
+	text-align:right;
+	padding-right:12px;
+}
+
+.LinkTable
+{
+	}
+	
+.LinkTable td
+{
+	padding-left:2px;
+	padding-right:2px;
+	border-width:0px;
+}
+
+.ControlLabel
+{
+	font-weight:bold;
+	}
+
+
+/*Start-Jquery Theme Custome Script*/
+.toggler
+{
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+#button
+{
+	padding: .5em 1em;
+	text-decoration: none;
+}
+#effect
+{
+	height: 50px;
+	padding: 0.4em;
+	position: relative;
+}
+#effect h3
+{
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+#effect .title
+{
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+}
+.button
+{
+	padding: .3em .5em;
+	text-decoration: none;
+}
+
+.ui-effects-transfer
+{
+	border: 2px dotted gray;
+}
+.fg-button
+{
+	outline: 0;
+	margin: 0 4px 0 0;
+	padding: .4em 1em;
+	text-decoration: none !important;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	zoom: 1;
+}
+/* Easy Slider */
+
+#newFeaturesSlider
+{
+	margin-left:4px;
+	border: solid 5px #1484E6;
+	text-align:left;
+}
+#newFeaturesSlider ul, #newFeaturesSlider li
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#newFeaturesSlider li
+{
+	width: 882px;
+	height: 230px;
+	overflow: hidden;
+	background: #F5F5F5;
+	color:#585858;
+}
+
+#newFeaturesSlider li h2
+{
+	margin: 5px 5px 0px 5px;
+	padding: 5px 5px 5px 5px;
+	color: #FFFFFF;
+	background-color: #1484E6;
+	border:solid 1px #FFFFFF;
+	background: #5C9CCC url(images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) repeat-x scroll 50% 50%;
+	text-align:center;
+}
+#newFeaturesSlider li p
+{
+	margin: 10px;
+}
+
+p#controls
+{
+	margin: 0;
+	position: relative;
+}
+
+#prevBtn, #nextBtn
+{
+	display: block;
+	margin: 0;
+	overflow: hidden;
+	text-indent: -8000px;
+	width: 30px;
+	height: 77px;
+	position: absolute;
+	left: -26px;
+	top: -170px;
+}
+#nextBtn
+{
+	left: 896px;
+}
+#prevBtn a, #nextBtn a
+{
+	display: block;
+	width: 30px;
+	height: 77px;
+	background: url(images/btn_prev.gif) no-repeat 0 0;
+}
+#nextBtn a
+{
+	background: url(images/btn_next.gif) no-repeat 0 0;
+}
+
+a:link {
+    text-decoration: none;
+
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 10px;
+}
+
+ul li.arrow {
+    background-image: url(Arrow-Right.png);
+    background-repeat: no-repeat;
+    background-position: 0px 5px; 
+    padding-left: 20px;
+	margin-top:5px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:12px;
+}
+.navigation {
+	float:left;
+	width:988px;
+	height:36px;
+			margin-top:0px;
+
+
+	}
+.logout {
+	float:right;
+	width:150px;
+	height:36px;
+	margin-top:0px;
+
+	}
+	
+	#container{float:left;
+width:auto;
+height:auto;
+margin:0px 0px 0px 80px;
+
+}
+
+#left{
+	float:left;
+	width:370px;
+	height:410px;
+	margin:0px 5px 5px 5px;
+
+}
+#center{
+	float:left;
+	width:360px;
+	margin:5px 10px 10px 5px;
+
+
+}
+
+	
+	.col-md-4, .col-md-6{ position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;}
+	
+	.panel {
+    margin-bottom: 20px;
+	background-color:#f3f3f3;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+}
+
+.panel-body {
+    padding: 10px;
+
+}
+
+.panel-heading {
+	
+	background: #1f62af; /* Old browsers */
+    background: -moz-linear-gradient(top, #1f62af 0%, #1f62af 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1f62af), color-stop(100%,#1f62af)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1f62af 0%,#1f62af 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1f62af 0%,#1f62af 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1f62af 0%,#1f62af 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #1f62af 0%,#1f62af 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f62af', endColorstr='#1f62af',GradientType=0 ); /* IE6-9 */
+    border-color: #080808;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+	border-radius:6px;
+	height:15px;
+}
+
+.text_content_left{
+	font-weight:bold;
+	color:#3669b0;
+	line-height:20px;
+	}
+	.text_content_left_my_acc{
+		font-weight:bold;
+	 color:#3669b0;
+	 border-bottom:1px dotted #729fdf;
+	}
+
+.text_content_right{
+	 line-height:20px;
+	padding-left:10px;
+	color:#6a6a6a;
+	margin:auto;
+	}
+.my_details{
+	width:60px;
+	height:60px;
+	border-radius:30%;
+	border:2px solid #3669b0;
+	margin:auto;
+	}
+	h4, .h4 {
+    font-family: inherit;
+    font-weight: 200;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.icon_container{
+	width:26px;
+	height:30px;
+	margin-top:-6px;
+	margin-left:-10px;
+	}
+	
+	a {
+    color: #428bca;
+    text-decoration: none;
+}
+
+    a:hover, a:focus {
+        color: #2a6496;
+        text-decoration: none;
+    }
+
+    a:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+	.fa {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;}
+.fa-play:before {
+content: "\f04b";
+}
+
+/* // Easy Slider */
+/*End-Jquery Theme Custome Script*/

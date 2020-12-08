@@ -1,0 +1,188 @@
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Author: Net Support Team-->
+<!--Project Name: Paymentmanagement - Explore More-->
+<!--Module Name: Payment -->
+
+<struts-config>
+
+	<!-- ============ Form Bean Definitions ============ -->
+	<!-- =============================================== -->
+	<form-beans>
+							<!--| ====================================================== | -->
+							<!--|        Paymentmanagement Form Beans  Start		| -->
+							<!--| ====================================================== | -->
+
+	    
+	      <form-bean name="loanAgainstDepositStatusReportForm" type="com.ibank.loan.report.formbean.LoanAgainstDepositStatusForm"/>
+	       <form-bean name="pDChequeStatusReportForm" type="com.ibank.loan.report.formbean.PDChequeStatusReportForm"/>
+	       <form-bean name="accountSummaryLoanReportForm" type="com.ibank.loan.report.formbean.AccountSummaryReportForm"/>
+	        <form-bean name="accountStatementReportForm" type="com.ibank.loan.report.formbean.AccountStatementReportForm"/>
+	    
+	 
+	    
+	</form-beans>
+	<!-- ============ Action Mapping Definitions ============ -->
+	<!-- ==================================================== -->
+    <action-mappings>
+	<!-- New User Registration Start -->
+	<!-- ==================================== -->
+
+<action path="/pDChequeStatusReport"
+        type="com.ibank.loan.report.action.PDChequeStatusReportAction"
+        name="pDChequeStatusReportForm"
+        validate="false"
+        input="/pages/loan/report/PDChequeStatusReport.jsp">
+        <forward name="success" path="/pages/loan/report/PDChequeStatusReport.jsp"/>
+        <forward name="failure" path="/pages/loan/report/PDChequeStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+     <action path="/cancelPDChequeStatusReport"
+        type="com.ibank.loan.report.action.PDChequeStatusReportAction"
+        name="pDChequeStatusReportForm"
+        validate="false"
+        input="/pages/loan/report/PDChequeStatusReport.jsp">
+        <forward name="success" path="/pages/menu/NBFIMyBankMenu.jsp"/>
+        <forward name="failure" path="/pages/loan/report/PDChequeStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    <action path="/logOutibankPDChequeStatus" 
+	 type="com.ibank.loan.report.action.PDChequeStatusReportAction"
+        name="pDChequeStatusReportForm" 
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	<action path="/logOutibankLoanAccountSummary" 
+	    type="com.ibank.loan.report.action.AccountSummaryReportAction"
+        name="accountSummaryLoanReportForm"
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+   <action path="/executePDChequeStatusReport"
+        type="com.ibank.loan.report.action.PDChequeStatusReportAction"
+        name="pDChequeStatusReportForm"
+        validate="false"
+        input="/pages/loan/report/PDChequeStatusReport.jsp">
+        <forward name="success" path="/pages/loan/report/PDChequeStatusReport.jsp"/>
+        <forward name="failure" path="/pages/loan/report/PDChequeStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+ <!--   	<action path="/ReportTransactionStatement" 
+		type="com.ibank.loan.report.action.PDChequeStatusReportAction" 
+		name="pDChequeStatusReportForm" 
+		validate="false" 
+		input="/pages/loan/report/PDChequeStatusReport.jsp">
+		<forward name="success" path="/pages/loan/report/PDChequeStatusReport.jsp"/>
+		<forward name="failure" path="/pages/loan/report/PDChequeStatusReport.jsp"/>
+		<forward name="sessionExpire" path = "/logInExpired.do"/>
+		<forward name="sessionibankMenu" path="/logInibankMenu.do"/>
+		<forward name="fatalError" path = "/logInExpired.do"/>
+	</action>	
+ --> 
+	<!-- New User Registration Start -->
+	<!--Start PD Cheque Status Report-->
+	<!-- ==================================== -->
+
+   <action path="/loanAgainstDepositStatusReport"
+        type="com.ibank.loan.report.action.LoanAgainstDepositStatusAction"
+        name="loanAgainstDepositStatusReportForm"
+        validate="false"
+        input="/pages/loan/report/LoanAgainstDepositStatusReport.jsp">
+        <forward name="success" path="/pages/loan/report/LoanAgainstDepositStatusReport.jsp"/>
+        <forward name="failure" path="/pages/loan/report/LoanAgainstDepositStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+     <action path="/ReportLoanAgainstDepositStatus"
+        type="com.ibank.loan.report.action.LoanAgainstDepositStatusAction"
+        name="loanAgainstDepositStatusReportForm"
+        validate="false"
+        input="/pages/loan/report/LoanAgainstDepositStatusReport.jsp">
+        <forward name="success" path="/pages/loan/report/LoanAgainstDepositStatusReport.jsp"/>
+        <forward name="failure" path="/pages/loan/report/LoanAgainstDepositStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+    	<action path="/logOutibank" 
+		type="com.ibank.loan.report.action.LoanAgainstDepositStatusAction"
+		name="loanAgainstDepositStatusReportForm" 
+		validate="false" 
+		input="/pages/loan/report/LoanAgainstDepositStatusReport.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>	
+    
+    <action path="/loanAccountSummaryReport"
+        type="com.ibank.loan.report.action.AccountSummaryReportAction"
+        name="accountSummaryLoanReportForm"
+        validate="false"
+        input="/pages/loan/report/AccountSummaryReport.jsp">
+        <forward name="success" path="/pages/loan/report/AccountSummaryReport.jsp"/>
+        <forward name="failure" path="/pages/loan/report/AccountSummaryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+     
+       <action path="/executeLoanAccountSummaryReport"
+        type="com.ibank.loan.report.action.AccountSummaryReportAction"
+        name="accountSummaryLoanReportForm"
+        validate="false"
+        input="/pages/loan/report/AccountSummaryReport.jsp">
+        <forward name="success" path="/pages/loan/report/AccountSummaryReport.jsp"/>
+        <forward name="failure" path="/pages/loan/report/AccountSummaryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+
+          <action path="/loanAccountStatementReport"
+        type="com.ibank.loan.report.action.AccountStatementReportAction"
+        name="accountStatementReportForm"
+        validate="false"
+        input="/pages/loan/report/AccountStatementReport.jsp">
+        <forward name="success" path="/pages/loan/report/AccountStatementReport.jsp"/>
+        <forward name="failure" path="/pages/loan/report/AccountStatementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+
+	<action path="/cancelFundTransfertoBkashWalletReport"
+        type="com.ibank.ibanking.report.action.FundTransfertoBkashWalletReportAction"
+        name="fundTransfertoBkashWalletReportForm"
+        validate="false"
+        input="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	</action-mappings>
+	
+</struts-config>

@@ -1,0 +1,37 @@
+BODY {
+	FONT-SIZE: 11pt; BACKGROUND: #ffffff; MARGIN: 2px; COLOR: #000; FONT-FAMILY: Verdana
+}
+A:visited {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana,Arial,Helvetica,Sans-serif
+}
+A:link {
+	COLOR: #069; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #069; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #069; TEXT-DECORATION: none
+}
+DIV.pre {
+	BORDER-RIGHT: blue 1px dashed; 
+	PADDING-RIGHT: 5px; 
+	BORDER-TOP: blue 1px dashed; 
+	PADDING-LEFT: 5px; 
+	FONT-SIZE: 10pt; 
+	BACKGROUND: #ffffff; 
+	PADDING-BOTTOM: 5px; 
+	MARGIN: 5px; 
+	OVERFLOW: auto; 
+	BORDER-LEFT: blue 1px dashed; 
+	PADDING-TOP: 5px; 
+	BORDER-BOTTOM: blue 1px dashed; 
+	FONT-FAMILY: monospace; 
+	WHITE-SPACE: pre
+}
+.codehead {
+	FONT-WEIGHT: bold; FONT-SIZE: xx-small; BACKGROUND: #ffffff; FONT-FAMILY: Verdana,Arial,Helvetica,Sans-serif
+}
+
+
+

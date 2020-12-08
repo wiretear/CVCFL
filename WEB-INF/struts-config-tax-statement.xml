@@ -1,0 +1,121 @@
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Author: Net Support Team-->
+<!--Project Name: Paymentmanagement - Explore More-->
+<!--Module Name: Payment -->
+
+<struts-config>
+
+	<!-- ============ Form Bean Definitions ============ -->
+	<!-- =============================================== -->
+	<form-beans>
+							<!--| ====================================================== | -->
+							<!--|        Paymentmanagement Form Beans  Start		| -->
+							<!--| ====================================================== | -->
+
+	    
+	    <form-bean name="taxStatementReportForm" type="com.ibank.taxstatement.report.formbaen.TaxStateMentReportForm"/>
+	    <form-bean name="advanceIncomeTaxReportReportForm" type="com.ibank.taxstatement.report.formbaen.AdvanceIncomeTaxReportForm"/>
+	    
+	</form-beans>
+	<!-- ============ Action Mapping Definitions ============ -->
+	<!-- ==================================================== -->
+    <action-mappings>
+	<!-- New User Registration Start -->
+	<!-- ==================================== -->
+
+   <action path="/advanceIncomeTaxStatementReport"
+        type="com.ibank.taxstatement.report.action.AdvanceIncomeTaxReportAction"
+        name="advanceIncomeTaxReportReportForm"
+        validate="false"
+        input="/pages/taxstatement/report/AdvanceIncomeTaxStatementReport.jsp">
+        <forward name="success" path="/pages/taxstatement/report/AdvanceIncomeTaxStatementReport.jsp"/>
+        <forward name="failure" path="/pages/taxstatement/report/AdvanceIncomeTaxStatementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+       <action path="/advanceIncomeTaxStatementPDF"
+        type="com.ibank.taxstatement.report.action.AdvanceIncomeTaxReportAction"
+        name="advanceIncomeTaxReportReportForm"
+        validate="false"
+        input="/pages/taxstatement/report/AdvanceIncomeTaxStatementReport.jsp">
+        <forward name="success" path="/pages/taxstatement/report/AdvanceIncomeTaxStatementReport.jsp"/>
+        <forward name="failure" path="/pages/taxstatement/report/AdvanceIncomeTaxStatementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+    	<action path="/logOutibank" 
+		type="com.ibank.taxstatement.report.action.AdvanceIncomeTaxReportAction"
+		name="advanceIncomeTaxReportReportForm" 
+		validate="false" 
+		input="/pages/taxstatement/report/AdvanceIncomeTaxStatementReport.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>	
+	<action path="/cancelFundTransfertoBkashWalletReport"
+        type="com.ibank.taxstatement.report.action.AdvanceIncomeTaxReportAction"
+        name="fundTransfertoBkashWalletReportForm"
+        validate="false"
+        input="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+     <action path="/taxStatementReport"
+        type="com.ibank.taxstatement.report.action.TaxStateMentReportAction"
+        name="taxStatementReportForm"
+        validate="false"
+        input="/pages/taxstatement/report/TaxStatementReport.jsp">
+        <forward name="success" path="/pages/taxstatement/report/TaxStatementReport.jsp"/>
+        <forward name="failure" path="/pages/taxstatement/report/TaxStatementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+       <action path="/taxStatementReportPDF"
+        type="com.ibank.taxstatement.report.action.TaxStateMentReportAction"
+        name="taxStatementReportForm"
+        validate="false"
+        input="/pages/taxstatement/report/TaxStatementReport.jsp">
+        <forward name="success" path="/pages/taxstatement/report/TaxStatementReport.jsp"/>
+        <forward name="failure" path="/pages/taxstatement/report/TaxStatementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+        	<action path="/logOutibank" 
+		type="com.ibank.taxstatement.report.action.TaxStateMentReportAction"
+		name="taxStatementReportForm" 
+		validate="false" 
+		input="/pages/taxstatement/report/TaxStatementReport.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	<action path="/cancelFundTransfertoBkashWalletReport"
+        type="com.ibank.taxstatement.report.action.TaxStateMentReportAction"
+        name="taxStatementReportForm"
+        validate="false"
+        input="/pages/taxstatement/report/TaxStatementReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/taxstatement/report/TaxStatementReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	</action-mappings>
+	
+</struts-config>

@@ -1,0 +1,162 @@
+#keyboardInputMaster {
+	BORDER-RIGHT: #888888 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #eeeeee 1px solid; PADDING-LEFT: 0px; Z-INDEX: 1000000; MIN-HEIGHT: 0px; FILTER: alpha(opacity=95); PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: 11px Arial,sans-serif; BORDER-LEFT: #cccccc 1px solid; WIDTH: auto; CURSOR: default; PADDING-TOP: 0px; BORDER-BOTTOM: #444444 1px solid; POSITION: absolute; HEIGHT: auto; BACKGROUND-COLOR: #dddddd; TEXT-ALIGN: left; min-width: 0; box-shadow: 0px 2px 10px #444444; opacity: 0.95; border-radius: 0.6em; webkit-border-radius: 0.6em; moz-border-radius: 0.6em; webkit-box-shadow: 0px 2px 10px #444444; moz-box-shadow: 0px 2px 10px #444444; moz-user-select: none
+}
+#keyboardInputMaster  {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; MIN-HEIGHT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: 11px/1.3em Arial,sans-serif; VERTICAL-ALIGN: baseline; BORDER-LEFT: 0px; WIDTH: auto; COLOR: #000000; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; POSITION: static; HEIGHT: auto; min-width: 0; outline: 0px
+}
+#keyboardInputMaster TABLE {
+	TABLE-LAYOUT: auto
+}
+.keyboardInputSize1#keyboardInputMaster {
+	FONT-SIZE: 9px
+}
+.keyboardInputSize1#keyboardInputMaster  {
+	FONT-SIZE: 9px
+}
+.keyboardInputSize3#keyboardInputMaster {
+	FONT-SIZE: 13px
+}
+.keyboardInputSize3#keyboardInputMaster  {
+	FONT-SIZE: 13px
+}
+.keyboardInputSize4#keyboardInputMaster {
+	FONT-SIZE: 16px
+}
+.keyboardInputSize4#keyboardInputMaster  {
+	FONT-SIZE: 16px
+}
+.keyboardInputSize5#keyboardInputMaster {
+	FONT-SIZE: 20px
+}
+.keyboardInputSize5#keyboardInputMaster  {
+	FONT-SIZE: 20px
+}
+#keyboardInputMaster THEAD TR TH {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; PADDING-BOTTOM: 0.1em; PADDING-TOP: 0.3em; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #999999; TEXT-ALIGN: right; border-radius: 0.6em 0.6em 0px 0px; webkit-border-radius: 0.6em 0.6em 0px 0px; moz-border-radius: 0.6em 0.6em 0px 0px
+}
+#keyboardInputMaster THEAD TR TH DIV {
+	FONT-WEIGHT: bold; FONT-SIZE: 130%! important; Z-INDEX: 1; FLOAT: left; CURSOR: pointer; MARGIN-RIGHT: 0.5em; POSITION: relative; HEIGHT: 1.3em; BACKGROUND-COLOR: transparent
+}
+#keyboardInputMaster THEAD TR TH DIV OL {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; OVERFLOW-Y: auto; DISPLAY: none; LEFT: 0px; OVERFLOW-X: hidden; BORDER-LEFT: #999999 1px solid; WIDTH: 12em; BORDER-BOTTOM: #999999 1px solid; LIST-STYLE-TYPE: none; POSITION: absolute; TOP: 90%; HEIGHT: 9.4em; BACKGROUND-COLOR: #f6f6f6; TEXT-ALIGN: left
+}
+#keyboardInputMaster THEAD TR TH DIV OL LI {
+	PADDING-RIGHT: 0.4em; PADDING-LEFT: 0.4em; PADDING-BOTTOM: 0.2em; WIDTH: 12em; CURSOR: pointer; PADDING-TOP: 0.2em; WHITE-SPACE: nowrap
+}
+#keyboardInputMaster THEAD TR TH DIV OL LI.selected {
+	BACKGROUND-COLOR: #ffffcc
+}
+#keyboardInputMaster THEAD TR TH DIV OL LI:hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH DIV OL LI.hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH SPAN {
+	BORDER-RIGHT: #5d5d5d 1px solid; PADDING-RIGHT: 0.4em; BORDER-TOP: #e5e5e5 1px solid; DISPLAY: inline-block; PADDING-LEFT: 0.4em; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 0.3em; VERTICAL-ALIGN: middle; BORDER-LEFT: #e5e5e5 1px solid; CURSOR: pointer; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px; BORDER-BOTTOM: #5d5d5d 1px solid; HEIGHT: 1.4em; BACKGROUND-COLOR: #cccccc; border-radius: 0.3em; webkit-border-radius: 0.3em; moz-border-radius: 0.3em; webkit-transition: background-color .15s ease-in-out; o-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out
+}
+#keyboardInputMaster THEAD TR TH STRONG {
+	BORDER-RIGHT: #5d5d5d 1px solid; PADDING-RIGHT: 0.4em; BORDER-TOP: #e5e5e5 1px solid; DISPLAY: inline-block; PADDING-LEFT: 0.4em; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 0.3em; VERTICAL-ALIGN: middle; BORDER-LEFT: #e5e5e5 1px solid; CURSOR: pointer; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px; BORDER-BOTTOM: #5d5d5d 1px solid; HEIGHT: 1.4em; BACKGROUND-COLOR: #cccccc; border-radius: 0.3em; webkit-border-radius: 0.3em; moz-border-radius: 0.3em; webkit-transition: background-color .15s ease-in-out; o-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out
+}
+#keyboardInputMaster THEAD TR TH SMALL {
+	BORDER-RIGHT: #5d5d5d 1px solid; PADDING-RIGHT: 0.4em; BORDER-TOP: #e5e5e5 1px solid; DISPLAY: inline-block; PADDING-LEFT: 0.4em; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 0.3em; VERTICAL-ALIGN: middle; BORDER-LEFT: #e5e5e5 1px solid; CURSOR: pointer; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px; BORDER-BOTTOM: #5d5d5d 1px solid; HEIGHT: 1.4em; BACKGROUND-COLOR: #cccccc; border-radius: 0.3em; webkit-border-radius: 0.3em; moz-border-radius: 0.3em; webkit-transition: background-color .15s ease-in-out; o-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out
+}
+#keyboardInputMaster THEAD TR TH BIG {
+	BORDER-RIGHT: #5d5d5d 1px solid; PADDING-RIGHT: 0.4em; BORDER-TOP: #e5e5e5 1px solid; DISPLAY: inline-block; PADDING-LEFT: 0.4em; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 0.3em; VERTICAL-ALIGN: middle; BORDER-LEFT: #e5e5e5 1px solid; CURSOR: pointer; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px; BORDER-BOTTOM: #5d5d5d 1px solid; HEIGHT: 1.4em; BACKGROUND-COLOR: #cccccc; border-radius: 0.3em; webkit-border-radius: 0.3em; moz-border-radius: 0.3em; webkit-transition: background-color .15s ease-in-out; o-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out
+}
+#keyboardInputMaster THEAD TR TH STRONG {
+	FONT-WEIGHT: bold
+}
+#keyboardInputMaster THEAD TR TH SMALL {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.2em; PADDING-LEFT: 0.3em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; border-radius: 0.3em 0px 0px 0.3em; webkit-border-radius: 0.3em 0px 0px 0.3em; moz-border-radius: 0.3em 0px 0px 0.3em
+}
+#keyboardInputMaster THEAD TR TH BIG {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.2em; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: 0px; border-radius: 0px 0.3em 0.3em 0px; webkit-border-radius: 0px 0.3em 0.3em 0px; moz-border-radius: 0px 0.3em 0.3em 0px
+}
+#keyboardInputMaster THEAD TR TH SPAN:hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH SPAN.hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH STRONG:hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH STRONG.hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH SMALL:hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH SMALL.hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH BIG:hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster THEAD TR TH BIG.hover {
+	BACKGROUND-COLOR: #dddddd
+}
+#keyboardInputMaster TBODY TR TD {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; PADDING-BOTTOM: 0.3em; VERTICAL-ALIGN: top; PADDING-TOP: 0.2em; TEXT-ALIGN: left
+}
+#keyboardInputMaster TBODY TR TD DIV {
+	ZOOM: 2; POSITION: relative; TEXT-ALIGN: center
+}
+#keyboardInputMaster TBODY TR TD TABLE {
+	WIDTH: 100%; WHITE-SPACE: nowrap; BORDER-COLLAPSE: separate; border-spacing: 0px
+}
+#keyboardInputMaster TBODY TR TD#keyboardInputNumpad TABLE {
+	MARGIN-LEFT: 0.2em; WIDTH: auto
+}
+#keyboardInputMaster TBODY TR TD TABLE.keyboardInputCenter {
+	MARGIN: 0px auto; WIDTH: auto
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD {
+	BORDER-RIGHT: #5d5d5d 1px solid; PADDING-RIGHT: 0.45em; BORDER-TOP: #e5e5e5 1px solid; PADDING-LEFT: 0.45em; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; BORDER-LEFT: #e5e5e5 1px solid; CURSOR: default; PADDING-TOP: 0px; BORDER-BOTTOM: #5d5d5d 1px solid; FONT-FAMILY: 'Lucida Console','Arial Unicode MS',monospace; WHITE-SPACE: pre; HEIGHT: 1.8em; BACKGROUND-COLOR: #eeeeee; min-width: 0.75em; border-radius: 0.2em; webkit-border-radius: 0.2em; moz-border-radius: 0.2em; webkit-transition: background-color .15s ease-in-out; o-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD.last {
+	WIDTH: 99%
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD.space {
+	PADDING-RIGHT: 4em; PADDING-LEFT: 4em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD.deadkey {
+	BACKGROUND-COLOR: #ccccdd
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD.target {
+	BACKGROUND-COLOR: #ddddcc
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD:hover {
+	BORDER-RIGHT: #555555 1px solid; BORDER-TOP: #d5d5d5 1px solid; BORDER-LEFT: #d5d5d5 1px solid; BORDER-BOTTOM: #555555 1px solid; BACKGROUND-COLOR: #cccccc
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD.hover {
+	BORDER-RIGHT: #555555 1px solid; BORDER-TOP: #d5d5d5 1px solid; BORDER-LEFT: #d5d5d5 1px solid; BORDER-BOTTOM: #555555 1px solid; BACKGROUND-COLOR: #cccccc
+}
+#keyboardInputMaster THEAD TR TH SPAN:active {
+	BORDER-RIGHT: #d5d5d5 1px solid; BORDER-TOP: #555555 1px solid; BORDER-LEFT: #555555 1px solid; BORDER-BOTTOM: #d5d5d5 1px solid; BACKGROUND-COLOR: #cccccc
+}
+#keyboardInputMaster THEAD TR TH SPAN.pressed {
+	BORDER-RIGHT: #d5d5d5 1px solid; BORDER-TOP: #555555 1px solid; BORDER-LEFT: #555555 1px solid; BORDER-BOTTOM: #d5d5d5 1px solid; BACKGROUND-COLOR: #cccccc
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD:active {
+	BORDER-RIGHT: #d5d5d5 1px solid; BORDER-TOP: #555555 1px solid; BORDER-LEFT: #555555 1px solid; BORDER-BOTTOM: #d5d5d5 1px solid; BACKGROUND-COLOR: #cccccc
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD.pressed {
+	BORDER-RIGHT: #d5d5d5 1px solid; BORDER-TOP: #555555 1px solid; BORDER-LEFT: #555555 1px solid; BORDER-BOTTOM: #d5d5d5 1px solid; BACKGROUND-COLOR: #cccccc
+}
+#keyboardInputMaster TBODY TR TD TABLE TBODY TR TD SMALL {
+	DISPLAY: block; FONT-SIZE: 0.6em! important; LINE-HEIGHT: 1.1em; TEXT-ALIGN: center
+}
+#keyboardInputMaster TBODY TR TD DIV LABEL {
+	LEFT: 0.3em; BOTTOM: 0.2em; POSITION: absolute
+}
+#keyboardInputMaster TBODY TR TD DIV LABEL INPUT {
+	VERTICAL-ALIGN: middle; WIDTH: 1.1em; HEIGHT: 1.1em; BACKGROUND-COLOR: #f6f6f6
+}
+#keyboardInputMaster TBODY TR TD DIV VAR {
+	FONT-WEIGHT: bold; RIGHT: 3px; COLOR: #444444; BOTTOM: 0px; FONT-STYLE: italic; POSITION: absolute
+}
+.keyboardInputInitiator {
+	MARGIN: 0px 3px; VERTICAL-ALIGN: middle; CURSOR: pointer
+}

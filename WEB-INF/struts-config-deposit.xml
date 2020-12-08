@@ -1,0 +1,120 @@
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Author: Net Support Team-->
+<!--Project Name: Paymentmanagement - Explore More-->
+<!--Module Name: Payment -->
+
+<struts-config>
+
+	<!-- ============ Form Bean Definitions ============ -->
+	<!-- =============================================== -->
+	<form-beans>
+							<!--| ====================================================== | -->
+							<!--|        Paymentmanagement Form Beans  Start		| -->
+							<!--| ====================================================== | -->
+
+	    
+	    <form-bean name="BEFTNIncomeSchemeReportForm" type="com.ibank.deposit.report.formbean.BEFTNIncomeSchemeReportForm"/>
+	 <form-bean name="depositAccountSummaryReportForm" type="com.ibank.deposit.report.formbean.AccountSummaryReportForm"/>
+	 <form-bean name="depositAccountStatementReportForm" type="com.ibank.deposit.report.formbean.AccountStatementReportForm"/>
+	    
+	</form-beans>
+	<!-- ============ Action Mapping Definitions ============ -->
+	<!-- ==================================================== -->
+    <action-mappings>
+	<!-- New User Registration Start -->
+	<!-- ==================================== -->
+
+   <action path="/bEFTNIncomeSchemeReport"
+        type="com.ibank.deposit.report.action.BEFTNIncomeSchemeReportAction"
+        name="BEFTNIncomeSchemeReportForm"
+        validate="false"
+        input="/pages/deposit/report/BEFTNIncomeSchemeReport.jsp">
+        <forward name="success" path="/pages/deposit/report/BEFTNIncomeSchemeReport.jsp"/>
+        <forward name="failure" path="/pages/deposit/report/BEFTNIncomeSchemeReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    <action path="/executeBEFTNIncomeSchemeReport"
+        type="com.ibank.deposit.report.action.BEFTNIncomeSchemeReportAction"
+        name="BEFTNIncomeSchemeReportForm"
+        validate="false"
+        input="/pages/deposit/report/BEFTNIncomeSchemeReport.jsp">
+        <forward name="success" path="/pages/deposit/report/BEFTNIncomeSchemeReport.jsp"/>
+        <forward name="failure" path="/pages/deposit/report/BEFTNIncomeSchemeReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+    
+     <action path="/logOutibankDepositAccountSummary" 
+	   type="com.ibank.deposit.report.action.AccountSummaryReportAction"
+        name="depositAccountSummaryReportForm"
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	<action path="/logOutibankBEFTNIncomeScheme" 
+	    type="com.ibank.deposit.report.action.BEFTNIncomeSchemeReportAction"
+        name="BEFTNIncomeSchemeReportForm"
+		validate="false" 
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/logInibankMenu.do"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionibankMenu" path="/pages/menu/ibankMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+         <action path="/depositAccountSummaryReport"
+        type="com.ibank.deposit.report.action.AccountSummaryReportAction"
+        name="depositAccountSummaryReportForm"
+        validate="false"
+        input="/pages/deposit/report/AccountSummaryReport.jsp">
+        <forward name="success" path="/pages/deposit/report/AccountSummaryReport.jsp"/>
+        <forward name="failure" path="/pages/deposit/report/AccountSummaryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+        <action path="/executeDepositAccountSummaryReport"
+        type="com.ibank.deposit.report.action.AccountSummaryReportAction"
+        name="depositAccountSummaryReportForm"
+        validate="false"
+        input="/pages/deposit/report/AccountSummaryReport.jsp">
+        <forward name="success" path="/pages/deposit/report/AccountSummaryReport.jsp"/>
+        <forward name="failure" path="/pages/deposit/report/AccountSummaryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+           <action path="/depositAccountStatementReport"
+        type="com.ibank.deposit.report.action.AccountStatementReportAction"
+        name="accountStatementReportForm"
+        validate="false"
+        input="/pages/deposit/report/AccountStatementReport.jsp">
+        <forward name="success" path="/pages/deposit/report/AccountStatementReport.jsp"/>
+        <forward name="failure" path="/pages/deposit/report/AccountStatementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	<action path="/cancelFundTransfertoBkashWalletReport"
+        type="com.ibank.ibanking.report.action.FundTransfertoBkashWalletReportAction"
+        name="fundTransfertoBkashWalletReportForm"
+        validate="false"
+        input="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	</action-mappings>
+	
+</struts-config>

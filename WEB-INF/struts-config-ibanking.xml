@@ -1,0 +1,528 @@
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Author: Net Support Team-->
+<!--Project Name: Paymentmanagement - Explore More-->
+<!--Module Name: Payment -->
+
+<struts-config>
+
+	<!-- ============ Form Bean Definitions ============ -->
+	<!-- =============================================== -->
+	<form-beans>
+							<!--| ====================================================== | -->
+							<!--|        Paymentmanagement Form Beans  Start		| -->
+							<!--| ====================================================== | -->
+
+	    <form-bean name="mobileAppsFinalApprovalForm" type="com.ibank.ibanking.formbean.MobileAppsFinalApprovalForm"/>
+		<form-bean name="dateWiseTransactionReportForm" type="com.ibank.ibanking.report.formbean.DateWiseTransactionReportForm"/>
+		<form-bean name="branchWiseActiveUserReportForm" type="com.ibank.ibanking.report.formbean.BranchWiseActiveUserReportForm"/>
+		<form-bean name="userRegistrationApprovalStatusReportForm" type="com.ibank.ibanking.report.formbean.UserRegistrationApprovalStatusReportForm"/>
+		<form-bean name="userActivityHistoryReportForm" type="com.ibank.ibanking.report.formbean.UserActivityHistoryReportForm"/>
+		<form-bean name="statusReportofNPSBOutgoingForm" type="com.ibank.ibanking.report.formbean.StatusReportofNPSBOutgoingForm"/>
+		<form-bean name="ecommerceTransactionHistoryReportForm" type="com.ibank.ibanking.report.formbean.ECommerceTransactionHistoryReportForm"/>
+		<form-bean name="mobileRechargeCommissionReportForm" type="com.ibank.ibanking.report.formbean.MobileRechargeCommissionReportForm"/>
+		
+		<form-bean name="fundTransfertoBkashWalletReportForm" type="com.ibank.ibanking.report.formbean.FundTransfertoBkashWalletReportForm"/>
+		<form-bean name="passportTransactionListForm" type="com.ibank.ibanking.report.formbean.PassportTransactionListForm"/>
+	       
+	</form-beans>
+
+	<!-- ============ Action Mapping Definitions ============ -->
+	<!-- ==================================================== -->
+    <action-mappings>
+	<!-- New User Registration Start -->
+	<!-- ==================================== -->
+
+   <action path="/mobileAppsFinalApproval"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+        <forward name="success" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	   <action path="/updateMobileAppsFinalApproval"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+        <forward name="success" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+		
+	<action path="/executeMobileAppsFinalApproval"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+        <forward name="success" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/getDetailsOfMobileAppsCustomer"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+        <forward name="success" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+		<action path="/searchApprovedRejectedDetailsOfMobileAppsCustomer"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+        <forward name="success" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/getCustomerInfoMailResendMobileAppsFinalApproval"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+        <forward name="success" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/executeMailResendMobileAppsFinalApproval"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+        <forward name="success" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelMobileAppsFinalApproval"
+        type="com.ibank.ibanking.action.MobileAppsFinalApprovalAction"
+        name="mobileAppsFinalApprovalForm"
+        validate="false"
+        input="/pages/ibanking/MobileAppsFinalApproval.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/MobileAppsFinalApproval.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+	
+	<!-- Report Start -->
+	
+	  <action path="/dateWiseTransactionSummaryReport"
+        type="com.ibank.ibanking.report.action.DateWiseTransactionReportAction"
+        name="dateWiseTransactionReportForm"
+        validate="false"
+        input="/pages/ibanking/report/DateWiseTransactionSummary.jsp">
+        <forward name="success" path="/pages/ibanking/report/DateWiseTransactionSummary.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/DateWiseTransactionSummary.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeDateWiseTransactionSummaryReport"
+        type="com.ibank.ibanking.report.action.DateWiseTransactionReportAction"
+        name="dateWiseTransactionReportForm"
+        validate="false"
+        input="/pages/ibanking/report/DateWiseTransactionSummary.jsp">
+        <forward name="success" path="/pages/ibanking/report/DateWiseTransactionSummary.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/DateWiseTransactionSummary.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+	
+	<action path="/cancelDateWiseTransactionSummaryReport"
+        type="com.ibank.ibanking.report.action.DateWiseTransactionReportAction"
+        name="dateWiseTransactionReportForm"
+        validate="false"
+        input="/pages/ibanking/report/DateWiseTransactionSummary.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/DateWiseTransactionSummary.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+	
+	<!-- Branch Wise Active User Report -->
+	
+	<action path="/branchWiseActiveUserReport"
+        type="com.ibank.ibanking.report.action.BranchWiseActiveUserReportAction"
+        name="branchWiseActiveUserReportForm"
+        validate="false"
+        input="/pages/ibanking/report/BranchWiseActiveUserReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/BranchWiseActiveUserReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/BranchWiseActiveUserReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeBranchWiseActiveUserReport"
+        type="com.ibank.ibanking.report.action.BranchWiseActiveUserReportAction"
+        name="branchWiseActiveUserReportForm"
+        validate="false"
+        input="/pages/ibanking/report/BranchWiseActiveUserReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/BranchWiseActiveUserReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/BranchWiseActiveUserReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+		
+	<action path="/cancelBranchWiseActiveUserReport"
+        type="com.ibank.ibanking.report.action.BranchWiseActiveUserReportAction"
+        name="branchWiseActiveUserReportForm"
+        validate="false"
+        input="/pages/ibanking/report/BranchWiseActiveUserReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/BranchWiseActiveUserReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+	
+		<!-- User Registration Approval Status Report -->
+	
+	<action path="/userRegistrationApprovalStatusReport"
+        type="com.ibank.ibanking.report.action.UserRegistrationApprovalStatusReportAction"
+        name="userRegistrationApprovalStatusReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeUserRegistrationApprovalStatusReport"
+        type="com.ibank.ibanking.report.action.UserRegistrationApprovalStatusReportAction"
+        name="userRegistrationApprovalStatusReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/getBranchDetailsUserRegistrationApprovalReport"
+        type="com.ibank.ibanking.report.action.UserRegistrationApprovalStatusReportAction"
+        name="userRegistrationApprovalStatusReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/searchbranchInformationDESCOBillCollectionFromPartyAccount"
+        type="com.ibank.ibanking.report.action.UserRegistrationApprovalStatusReportAction"
+        name="userRegistrationApprovalStatusReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/UserRegistrationApprovalStatusBranchDetails.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserRegistrationApprovalStatusBranchDetails.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	
+	<action path="/cancelUserRegistrationApprovalStatusReport"
+        type="com.ibank.ibanking.report.action.UserRegistrationApprovalStatusReportAction"
+        name="userRegistrationApprovalStatusReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserRegistrationApprovalStatusReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<!-- User Activity History Report -->
+	
+	<action path="/userActivityHistoryReport"
+        type="com.ibank.ibanking.report.action.UserActivityHistoryReportAction"
+        name="userActivityHistoryReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserActivityHistoryReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/UserActivityHistoryReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserActivityHistoryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeUserActivityHistoryReport"
+        type="com.ibank.ibanking.report.action.UserActivityHistoryReportAction"
+        name="userActivityHistoryReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserActivityHistoryReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/UserActivityHistoryReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserActivityHistoryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+
+	
+	<action path="/cancelUserActivityHistoryReport"
+        type="com.ibank.ibanking.report.action.UserActivityHistoryReportAction"
+        name="userActivityHistoryReportForm"
+        validate="false"
+        input="/pages/ibanking/report/UserActivityHistoryReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/UserActivityHistoryReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+    
+    	<!-- Status Report of NPSB Outgoing -->
+	
+	<action path="/statusReportofNPSBOutgoing"
+        type="com.ibank.ibanking.report.action.StatusReportofNPSBOutgoingAction"
+        name="statusReportofNPSBOutgoingForm"
+        validate="false"
+        input="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp">
+        <forward name="success" path="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeStatusReportofNPSBOutgoing"
+        type="com.ibank.ibanking.report.action.StatusReportofNPSBOutgoingAction"
+        name="statusReportofNPSBOutgoingForm"
+        validate="false"
+        input="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp">
+        <forward name="success" path="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+
+	
+	<action path="/cancelStatusReportofNPSBOutgoing"
+        type="com.ibank.ibanking.report.action.StatusReportofNPSBOutgoingAction"
+        name="statusReportofNPSBOutgoingForm"
+        validate="false"
+        input="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/StatusReportofNPSBOutgoing.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	
+	<!-- Status Report of Passport Transaction List Report -->
+	
+	<action path="/passportTransactionList"
+        type="com.ibank.ibanking.report.action.PassportTransactionListAction"
+        name="passportTransactionListForm"
+        validate="false"
+        input="/pages/ibanking/report/PassportTransactionList.jsp">
+        <forward name="success" path="/pages/ibanking/report/PassportTransactionList.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/PassportTransactionList.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executePassportTransactionList"
+        type="com.ibank.ibanking.report.action.PassportTransactionListAction"
+        name="passportTransactionListForm"
+        validate="false"
+        input="/pages/ibanking/report/PassportTransactionList.jsp">
+        <forward name="success" path="/pages/ibanking/report/PassportTransactionList.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/PassportTransactionList.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+
+	
+	<action path="/cancelPassportTransactionList"
+        type="com.ibank.ibanking.report.action.PassportTransactionListAction"
+        name="passportTransactionListForm"
+        validate="false"
+        input="/pages/ibanking/report/PassportTransactionList.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/PassportTransactionList.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	
+	<!-- ECommerce Transaction History -->
+	
+	<action path="/ecommerceTransactionHistoryReport"
+        type="com.ibank.ibanking.report.action.ECommerceTransactionHistoryReportAction"
+        name="ecommerceTransactionHistoryReportForm"
+        validate="false"
+        input="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeECommerceTransactionHistoryReport"
+        type="com.ibank.ibanking.report.action.ECommerceTransactionHistoryReportAction"
+        name="ecommerceTransactionHistoryReportForm"
+        validate="false"
+        input="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelECommerceTransactionHistoryReport"
+        type="com.ibank.ibanking.report.action.ECommerceTransactionHistoryReportAction"
+        name="ecommerceTransactionHistoryReportForm"
+        validate="false"
+        input="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/ECommerceTransactionHistoryReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+  	<!-- Mobile Recharge Commission -->  
+    <action path="/mobileRechargeCommission"
+        type="com.ibank.ibanking.report.action.MobileRechargeCommissionReportAction"
+        name="mobileRechargeCommissionReportForm"
+        validate="false"
+        input="/pages/ibanking/report/MobileRechargeCommission.jsp">
+        <forward name="success" path="/pages/ibanking/report/MobileRechargeCommission.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/MobileRechargeCommission.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeMobileRechargeCommissionReport"
+        type="com.ibank.ibanking.report.action.MobileRechargeCommissionReportAction"
+        name="mobileRechargeCommissionReportForm"
+        validate="false"
+        input="/pages/ibanking/report/MobileRechargeCommission.jsp">
+        <forward name="success" path="/pages/ibanking/report/MobileRechargeCommission.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/MobileRechargeCommission.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelMobileRechargeCommissionReport"
+        type="com.ibank.ibanking.report.action.MobileRechargeCommissionReportAction"
+        name="mobileRechargeCommissionReportForm"
+        validate="false"
+        input="/pages/ibanking/report/MobileRechargeCommission.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/MobileRechargeCommission.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+    
+    
+    	<!-- Fund Transfer to Bkash Wallet --> 
+    	 
+    <action path="/fundTransfertoBkashWalletReport"
+        type="com.ibank.ibanking.report.action.FundTransfertoBkashWalletReportAction"
+        name="fundTransfertoBkashWalletReportForm"
+        validate="false"
+        input="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeFundTransfertoBkashWalletReport"
+        type="com.ibank.ibanking.report.action.FundTransfertoBkashWalletReportAction"
+        name="fundTransfertoBkashWalletReportForm"
+        validate="false"
+        input="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action> 
+    
+    	<action path="/executeDownloadFundTransfertoBkashWalletReport"
+        type="com.ibank.ibanking.report.action.FundTransfertoBkashWalletReportAction"
+        name="fundTransfertoBkashWalletReportForm"
+        validate="false"
+        input="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp">
+        <forward name="success" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelFundTransfertoBkashWalletReport"
+        type="com.ibank.ibanking.report.action.FundTransfertoBkashWalletReportAction"
+        name="fundTransfertoBkashWalletReportForm"
+        validate="false"
+        input="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp">
+		<!--<forward name="success" path="/logInMyBankMenu.do"/>-->
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/report/FundTransfertoBkashWalletReport.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	</action-mappings>
+	
+</struts-config>

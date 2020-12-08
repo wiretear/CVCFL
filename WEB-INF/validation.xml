@@ -1,0 +1,579 @@
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+
+<form-validation>
+
+    <formset>
+
+		<form name="stationeryInventoryCancelForm">
+            <field property="receiptNo" depends="required">
+               <arg0 key="label.accountNo" />
+            </field>            
+		</form>
+
+		<form name="stationeryInventoryIssueForm">
+            <field property="fromNumber" depends="required">
+               <arg0 key="label.accountNo" />
+            </field>            
+		</form>
+	
+		<form name="userPINResetForm">
+		
+            <field property="accountNo" depends="required">
+                    <arg0 key="label.accountNo" />
+            </field>            
+		</form>
+
+
+		<form name="userMobileEntryRightsForm">
+            <field property="accountNo" depends="required">
+                    <arg0 key="label.accountNo" />
+            </field>            
+		</form>
+		
+		<form name="userEntryRightsForm">
+            <field property="accountNo" depends="required">
+                    <arg0 key="label.accountNo" />
+            </field>            
+		</form>
+		
+		<form name="salaryDestinationAccountSetupForm">
+            <field property="sourceAccountNo" depends="required">
+                    <arg0 key="label.sourceAccount" />
+            </field>   
+		</form>
+
+
+		<form name="sourceAccount">
+            <field property="paymentDate" depends="required">
+                    <arg0 key="label.sourceAccount" />
+            </field>   
+		</form>
+
+
+		<form name="creditCardSMSSendForm">
+            <field property="paymentDate" depends="required">
+                    <arg0 key="label.paymentDate" />
+            </field>   
+		</form>
+
+
+		<form name="eStatementForm">
+            <field property="paymentDate" depends="required">
+                    <arg0 key="label.paymentDate" />
+            </field>   
+
+            <field property="mailFrom" depends="required">
+                    <arg0 key="label.from" />
+            </field>   
+		</form>
+
+		<form name="utilityServiceForm">
+            <field property="userPINCode" depends="required">
+                    <arg0 key="label.password" />
+            </field>            
+		</form>
+
+		<form name="newUserRegistrationForm">
+            <field property="userID" depends="required">
+                    <arg0 key="label.userID" />
+            </field>            
+            <field property="userName" depends="required">
+                    <arg0 key="label.userName" />
+            </field>  
+
+            <field property="questionNo" depends="required">
+                    <arg0 key="label.question" />
+            </field>  
+
+            <field property="answer" depends="required">
+                    <arg0 key="label.answer" />
+            </field>  
+
+            <field property="religion" depends="required">
+                    <arg0 key="label.religion" />
+            </field>
+
+
+            <field property="dateOfBirth" depends="required">
+                    <arg0 key="label.dateofBirth" />
+            </field>
+
+            <field property="maritalStatus" depends="required">
+                    <arg0 key="label.maritalStatus" />
+            </field>
+
+            <field property="typeCode" depends="required">
+                    <arg0 key="label.typeCode" />
+            </field>  
+
+            <field property="presentCountry" depends="required">
+                    <arg0 key="label.country" />
+            </field>  
+
+            <field property="presentCity" depends="required">
+                    <arg0 key="label.city" />
+            </field>  
+
+            <field property="presentAddress" depends="required">
+                    <arg0 key="label.presentAddress" />
+            </field>  
+
+
+		</form>
+
+		<form name="myDictionaryForm">
+            <field property="writeWord" depends="required">
+                    <arg0 key="label.writeWord" />
+            </field>            
+		</form>
+
+		<form name="personalLogInStatusForm">
+			<field property="reportType" depends="required">
+                <arg0 key="label.reportType" />
+            </field>            
+            <field property="fromDate" depends="required">
+                    <arg0 key="label.fromDate" />
+            </field>            
+            <field property="toDate" depends="required">
+                    <arg0 key="label.toDate" />
+            </field>            
+		</form>
+
+
+		<form name="exchangeRateForm">
+			<field property="amount" depends="required">
+                 <arg0 key="label.amount" />
+            </field>            
+		</form>
+
+		<form name="chequeBookStatusForm">
+            <field property="accountNo" depends="required">
+                    <arg0 key="label.accountNo" />
+            </field>            
+            <field property="leafType" depends="required">
+                    <arg0 key="label.leafType" />
+            </field>            
+            <field property="fromDate" depends="required">
+                    <arg0 key="label.fromDate" />
+            </field>            
+            <field property="toDate" depends="required">
+                    <arg0 key="label.toDate" />
+            </field>            
+
+		</form>
+
+		<form name="clientAccountOpenForm">
+
+            <field property="password" depends="required">
+              	    <arg0 key="label.password"/>
+            </field>
+
+			<field property="branchCode" depends="required">
+              	    <arg0 key="label.branchName"/>
+            </field>
+         	 
+            <field property="accountType" depends="required">
+                    <arg0 key="label.accountType" />
+            </field>            
+
+            <field property="sourceAccount" depends="required">
+                    <arg0 key="label.sourceAccount" />
+            </field>            
+
+            <field property="depositAmount" depends="required">
+                    <arg0 key="label.amount" />
+            </field>            
+		</form>
+
+
+		<form name="logInMyBankLogInForm">
+            <field property="branchCode" depends="required">
+              	    <arg0 key="label.branchName"/>
+            </field>
+            <field property="myBankPassword" depends="required">
+                    <arg0 key="label.password" />
+            </field>            
+		</form>
+
+		<form name="clientCompanyInfoForm">
+            <field property="customerType" depends="required">
+              	    <arg0 key="label.clientType"/>
+            </field>
+		</form>
+
+		<form name="clientPersonInfoForm">
+            <field property="customerType" depends="required">
+              	    <arg0 key="label.clientType"/>
+            </field>
+		</form>
+
+
+		<form name="chequeBookStopForm">
+
+            <field property="myPINCode" depends="required">
+              	    <arg0 key="label.password"/>
+            </field>
+
+            <field property="accountNumber" depends="required">
+              	    <arg0 key="label.accountNumber"/>
+            </field>
+            <field property="accountTypeDescription" depends="required">
+              	    <arg0 key="label.accountType"/>
+            </field>
+            <field property="leafNo" depends="required">
+              	    <arg0 key="label.leaves"/>
+            </field>
+            <field property="reason" depends="required">
+              	    <arg0 key="label.reason"/>
+            </field>
+		</form>
+
+		<form name="chequeBookRequestForm">
+            <field property="myPINCode" depends="required">
+              	    <arg0 key="label.password"/>
+            </field>
+
+            <field property="accountNo" depends="required">
+              	    <arg0 key="label.accountNumber"/>
+            </field>
+
+            <field property="bookletSize" depends="required">
+              	    <arg0 key="label.leaves"/>
+            </field>
+		</form>
+
+
+		<form name="fDRForm">
+            <field property="branchCode" depends="required">
+              	    <arg0 key="label.branchName"/>
+            </field>
+
+            <field property="noOfTerm" depends="required">
+            	<arg0 key="label.noOfTerms"/>  
+	         </field>
+            
+            <field property="FDRAmount" depends="required">
+              	    <arg0 key="label.FDRAmount"/>
+            </field>
+
+            <field property="FDRStartDate" depends="required">
+              	    <arg0 key="label.FDRStartDate"/>
+            </field>
+
+		</form>
+
+		<form name="depositForm">
+            <field property="branchCode" depends="required">
+              	    <arg0 key="label.branchName"/>
+            </field>
+            <field property="accountType" depends="required">
+              	    <arg0 key="label.accountType"/>
+            </field>
+		</form>
+
+		<form name="batchProcessForm">
+            <field property="userName" depends="required">
+              	    <arg0 key="label.loginId"/>
+            </field>
+		</form>
+
+		<form name="transactionCompanyForm">
+            <field property="accountNumber" depends="required">
+              	    <arg0 key="label.accountNumber"/>
+            </field>
+            <field property="dateFrom" depends="required">
+              	    <arg0 key="label.dateFrom"/>
+            </field>
+            <field property="dateTo" depends="required">
+              	    <arg0 key="label.dateTo"/>
+            </field>
+            <field property="mobileType" depends="required">
+              	    <arg0 key="label.mobileType"/>
+            </field>
+            
+		</form>
+
+
+		<form name="setupCompanyInfoForm">
+            <field property="companyName" depends="required">
+              	    <arg0 key="label.loginId"/>
+            </field>
+         	 
+            <field property="securityPassword" depends="required">
+                    <arg0 key="label.password" />
+            </field>
+		</form>
+
+		<form name="setupAdministrativeUserForm">
+            <field property="userName" depends="required">
+              	    <arg0 key="label.loginId"/>
+            </field>
+         	 
+            <field property="securityPassword" depends="required">
+                    <arg0 key="label.password" />
+            </field>
+		</form>
+
+
+		<form name="logInForm">
+            <field property="userID" depends="required">
+              	    <arg0 key="label.loginId"/>
+            </field>
+         	 
+            <field property="password" depends="required">
+                    <arg0 key="label.password" />
+            </field>
+		</form>
+
+        <form name="transactionForm">
+            <field property="accountNumber" depends="required">
+                    <arg0 key="label.accountNumber" />
+            </field>
+            <field property="dateFrom" depends="required">
+                    <arg0 key="label.fromDate" />
+            </field>
+            <field property="dateTo" depends="required">
+                    <arg0 key="label.toDate" />
+            </field>
+		</form>
+
+		<form name="transferForm">
+         	<field property="userPassword" depends="required">
+                    <arg0 key="label.password" />
+            </field>
+
+         	<field property="itemType" depends="required">
+                    <arg0 key="label.itemType" />
+            </field>
+
+         	<field property="sourceAccount" depends="required">
+                    <arg0 key="label.sourceAccount" />
+            </field>
+
+            <field property="amount" depends="required">
+                    <arg0 key="label.amount" />
+            </field>
+
+         	<field property="destination" depends="required">
+                    <arg0 key="label.destination" />
+            </field>
+
+        	<field property="remarks" depends="maxlength">
+            		<arg0 key="label.remarks" />
+	             	<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+              			<var>
+                 			<var-name>maxlength</var-name>
+                 			<var-value>200</var-value>
+            			</var>                        	     
+	         </field>
+		</form>
+
+        <form name="loanForm">
+            <field property="loanAmount" depends="required,mask">
+                    <arg0 key="label.loanAmountRequired" />
+                    <var>
+                			<var-name>mask</var-name>
+                    		<var-value>^[0-9 .]*$</var-value>
+                	</var>
+            </field>
+
+            <field property="annualInterestRate" depends="required,float,floatRange">
+            <arg0 key="label.annualInterestRate" />  
+             <arg1 name="floatRange" key="${var:min}" resource="false"/>
+    	     	<arg2 name="floatRange" key="${var:max}" resource="false"/>
+        	      <var>
+            	      <var-name>min</var-name>
+                	  <var-value>0%</var-value>
+                  </var>
+                  <var>
+                      <var-name>max</var-name>
+                      <var-value>100%</var-value>
+                  </var>                     
+	         </field>
+
+            <field property="loanPeriodYear" depends="required,mask">
+                    <arg0 key="label.loanPeriodInYear" />
+                    <var>
+                			<var-name>mask</var-name>
+                    		<var-value>^[0-9]*$</var-value>
+                	</var>
+            </field>
+
+            <field property="numberPaymentYear" depends="required,mask">
+                    <arg0 key="label.numberOfPaymentsPerYear" />
+                    <var>
+                			<var-name>mask</var-name>
+                    		<var-value>^[0-9]*$</var-value>
+                	</var>
+            </field>
+
+            <field property="extraPaymentAmount" depends="float">
+                    <arg0 key="label.extraPayments" />
+            </field>
+            
+            
+		</form>
+
+        <form name="myUserIDChangeForm">
+
+            <field property="password" depends="required">
+                 <arg0 key="label.password" />
+            </field>
+            
+            <field property="userNameNew" depends="required">
+         	     <arg0 key="label.usernameNew"/>
+         	</field>
+         	 
+         	<field property="userNameConform" depends="required">
+         	     <arg0 key="label.newUserIDConform"/>
+         	</field>
+         	 
+		</form>
+
+        <form name="myPINChangeForm">
+
+            <field property="passwordOld" depends="required">
+                    <arg0 key="label.oldPassword" />
+            </field>
+
+            <field property="passwordNew" depends="required">
+                    <arg0 key="label.newPassword" />
+            </field>
+
+            <field property="passwordConf" depends="required">
+                    <arg0 key="label.conformPassword" />
+            </field>
+
+            <field property="passwordExpiredDays" depends="required">
+                 <arg0 key="label.pINExpired" />  
+	         </field>
+	         
+		</form>
+
+
+        <form name="myPINExpiredForm">
+
+            <field property="oldPIN" depends="required">
+                    <arg0 key="label.oldPassword" />
+            </field>
+
+            <field property="newPIN" depends="required">
+                    <arg0 key="label.newPassword" />
+            </field>
+
+            <field property="confirmPIN" depends="required">
+                    <arg0 key="label.conformPassword" />
+            </field>
+
+            <field property="passwordExpiredDays" depends="required">
+               <arg0 key="label.pINExpired" />  
+	         </field>
+            
+		</form>
+				
+        <form name="myPINForgetForm">
+        	<field property="userName" depends="required">
+                    <arg0 key="label.loginId" />
+            </field>
+
+        	<field property="questionNo" depends="required">
+                    <arg0 key="label.question" />
+            </field>
+            
+            <field property="answer" depends="required">
+                    <arg0 key="label.answer" />
+            </field>
+		</form>
+
+
+        <form name="myNewPINForgetForm">
+        
+        	<field property="userName" depends="required">
+                    <arg0 key="label.loginId" />
+            </field>
+
+        	<field property="customerID" depends="required">
+                    <arg0 key="label.customerID" />
+            </field>
+
+        	<field property="accountNumber" depends="required">
+                    <arg0 key="label.accountNumber" />
+            </field>
+
+        	<field property="accountTitle" depends="required">
+                    <arg0 key="label.accountTitle" />
+            </field>
+
+        	<field property="accountOpenDate" depends="required">
+                    <arg0 key="label.dateACOpening" />
+            </field>
+
+        	<field property="accountChequeNo" depends="required">
+                    <arg0 key="label.anyUnusedChequeNo" />
+            </field>
+
+        	<field property="transactionDate" depends="required">
+                    <arg0 key="label.lastTransactionDate" />
+            </field>
+
+        	<field property="transactionType" depends="required">
+                    <arg0 key="label.lastTransactionType" />
+            </field>
+
+        	<field property="transactionAmount" depends="required">
+                    <arg0 key="label.lastTransactionAmount" />
+            </field>
+		</form>
+
+        <form name="personalProfileForm">
+
+            <field property="password" depends="required">
+                    <arg0 key="label.password" />
+            </field>
+
+            <field property="welcomeName" depends="required">
+                    <arg0 key="label.fullName" />
+            </field>
+            
+		</form>
+
+        <form name="secretQuestionForm">
+        	<field property="title" depends="required">
+                    <arg0 key="label.title" />
+            </field>
+
+        	<field property="welcomeName" depends="required">
+                    <arg0 key="label.welcomeName" />
+            </field>
+
+            <field property="questionNo" depends="required">
+                    <arg0 key="label.question" />
+            </field>
+
+            <field property="religion" depends="required">
+                    <arg0 key="label.religion" />
+            </field>
+
+
+            <field property="dateOfBirth" depends="required">
+                    <arg0 key="label.dateofBirth" />
+            </field>
+
+            <field property="maritalStatus" depends="required">
+                    <arg0 key="label.maritalStatus" />
+            </field>
+
+            <field property="country" depends="required">
+                    <arg0 key="label.country" />
+            </field>
+            <field property="city" depends="required">
+                    <arg0 key="label.city" />
+            </field>
+            <field property="address" depends="required">
+                    <arg0 key="label.presentAddress" />
+            </field>
+
+		</form>
+    </formset>
+
+</form-validation>
